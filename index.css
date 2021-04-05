@@ -1,0 +1,109 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+body,
+html{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	background-image: url(images/bg.gif);
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.game-wrapper{
+	width: 540px;
+	height: 610px;
+	margin: 0 auto;
+	position: relative;
+}
+.menu{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 70px);
+	background-image: url(images/bg.png);
+	z-index: 1000;
+	border: 15px solid #A52A2A;
+	display: flex;
+	justify-content: center;
+	display: none;
+}
+.menu ul{
+	display: none;
+}
+.menu .menu-list{
+	display: block;
+}
+.menu .menu-list li{
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px 0px;
+	cursor: pointer;
+}
+.game-wrapper .game-information{
+	position: absolute;
+	top: 0;
+	padding: 0px 20px;
+	width: calc(100% - 10px);
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-image: url(images/ying9.png);
+}
+.game-information .current-score{
+	font-weight: bold;
+	color: #008B8B;
+}
+.game-information .max-score{
+	font-weight: bold;
+	color: brown;
+}
+#game-map{
+	border: 15px solid darkcyan;
+	width: 100%;
+	height: 540px;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	background-image: url(images/bg.png);
+}
+#game-map .snake-wrapper span{
+	/* margin: 5px 0px; */
+}
+#game-map .snake-head,
+#game-map .snake-body,
+#game-map .snake-food{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#game-map .snake-head{
+	background-image: url(images/snake-head.png);
+	width: 25px;
+	height: 25px;
+}
+#game-map .snake-food{
+	background-image: url(images/strawberry.png);
+}
+#game-map .snake-body{
+	width: 20px;
+	height: 20px;
+	background-image: url(images/cabbage.png);
+	border-radius: 50%;
+	overflow: hidden;
+}
